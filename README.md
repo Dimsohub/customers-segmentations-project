@@ -43,7 +43,7 @@ Users need either their own local copy of the database or access via Google Driv
 ```text
 customers-segmentations-project/
   scripts/
-    create_db.py           # script to create database from CSV
+    run_create_db.py       # script to create database from CSV
     explore_data.ipynb     # exploratory data analysis notebook
   README.md
   requirements.txt
