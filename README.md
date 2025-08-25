@@ -40,6 +40,9 @@ Users need either their own local copy of the database or access via Google Driv
 
 ## Project Structure
 
+## Project Structure
+
+```text
 customers-segmentations-project/
   scripts/
     create_db.py           # script to create database from CSV
@@ -47,7 +50,7 @@ customers-segmentations-project/
   README.md
   requirements.txt
   .gitignore
-
+```
 
 
 
