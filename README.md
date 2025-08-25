@@ -1,4 +1,4 @@
-# Online Retail SQL Project
+# Сustomers segmentation project
 
 This project analyzes the Online Retail dataset using SQL and Python.  
 The workflow starts from the original XLSX file, then converts it to CSV for SQLite, and finally explores the data with Python.
@@ -35,5 +35,7 @@ drive.mount('/content/drive')
 # Path to the database in your Drive
 db_path = '/content/drive/MyDrive/OnlineRetailProject/online_retail.db'
 conn = sqlite3.connect(db_path)
+
+Users need either their own local copy of the database or access via Google Drive.
 
 
