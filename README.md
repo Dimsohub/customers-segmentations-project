@@ -19,7 +19,7 @@ The workflow starts from the original XLSX file, then converts it to CSV for SQL
 ## Usage
 
 1. Download the XLSX file from [UCI Repository](https://archive.ics.uci.edu/dataset/352/online+retail).  
-2. Convert it to CSV (optional: use the provided `create_db.py`).  
+2. Convert it to CSV.  
 3. Run `create_db.py` to generate `online_retail.db` locally, or place your database in Google Drive.  
 4. Open `explore_data.ipynb` in Jupyter or Google Colab.
 
@@ -43,7 +43,7 @@ Users need either their own local copy of the database or access via Google Driv
 ```text
 customers-segmentations-project/
   scripts/
-    run_create_db.py       # script to create database from CSV
+    create_db.py           # script to create database from CSV
     explore_data.ipynb     # exploratory data analysis notebook
   README.md
   requirements.txt
