@@ -40,8 +40,6 @@ Users need either their own local copy of the database or access via Google Driv
 
 ## Project Structure
 
-## Project Structure
-
 ```text
 customers-segmentations-project/
   scripts/
@@ -51,6 +49,19 @@ customers-segmentations-project/
   requirements.txt
   .gitignore
 ```
+## Requirements
+
+Python 3.9+
+
+pandas
+
+plotly
+
+sqlite3-binary
+
+Install dependencies:
+
+pip install -r requirements.txt
 
 
 
