@@ -1,63 +1,39 @@
-# Сustomers segmentations project
+# Online Retail SQL Project
 
-This project analyzes the Online Retail dataset (https://archive.ics.uci.edu/dataset/352/online+retail) using SQL and Python.  
-The workflow starts from the original CSV file, then creates a SQLite database, and finally explores the data with Python.
+This project analyzes the Online Retail dataset using SQL and Python.  
+The workflow starts from the original XLSX file, then converts it to CSV for SQLite, and finally explores the data with Python.
 
 ## Project Workflow
 
-1. **CSV to Database**  
-   - The original dataset `Online Retail.csv` is stored in the `data/` folder.  
+1. **XLSX to CSV**  
+   - The original dataset [`Online Retail.xlsx`](https://archive.ics.uci.edu/dataset/352/online+retail) is available on the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/352/online+retail).  
+   - Convert it to CSV because SQLite cannot import XLSX directly.
+
+2. **CSV to SQLite Database**  
    - Using `create_db.py`, the CSV is cleaned and converted into a SQLite database `online_retail.db`.
 
-2. **Exploratory Data Analysis**  
+3. **Exploratory Data Analysis**  
    - Analysis is performed in `explore_data.ipynb`.  
    - The notebook connects to `online_retail.db`, performs queries, counts product pairs, and visualizes data using Plotly and pandas.
 
-## Project Structure
+## Usage
 
-customers-segmentations-project/
-│── data/
-│ ├── Online Retail.csv # original CSV
-│ └── online_retail.db # generated SQLite database
-│── scripts/
-│ ├── create_db.py # script to create database from CSV
-│ ├── explore_data.ipynb # exploratory data analysis notebook
-│── requirements.txt
-│── README.md
-│── .gitignore
+1. Download the XLSX file from [UCI Repository](https://archive.ics.uci.edu/dataset/352/online+retail).  
+2. Convert it to CSV (optional: use the provided `create_db.py`).  
+3. Run `create_db.py` to generate `online_retail.db` locally, or place your database in Google Drive.  
+4. Open `explore_data.ipynb` in Jupyter or Google Colab.
 
+### Accessing the Database in Colab
 
-## Database
+```python
+from google.colab import drive
+import sqlite3
 
-- `online_retail.db` contains the cleaned Online Retail dataset.
-- Table: `online_retail`
-- Columns:
-  - `invoiceno`
-  - `stockcode`
-  - `description`
-  - `quantity`
-  - `invoicedate`
-  - `unitprice`
-  - `customerid`
-  - `country`
+# Mount Google Drive
+drive.mount('/content/drive')
 
-## Requirements
+# Path to the database in your Drive
+db_path = '/content/drive/MyDrive/OnlineRetailProject/online_retail.db'
+conn = sqlite3.connect(db_path)
 
-- Python 3.9+
-- pandas
-- plotly
-- sqlite3-binary
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-
-Usage
-
-Navigate to the scripts/ folder.
-
-Run create_db.py to generate the database from CSV (if needed).
-
-Open explore_data.ipynb to run analysis and visualizations.
 
