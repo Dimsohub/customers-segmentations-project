@@ -35,7 +35,19 @@ drive.mount('/content/drive')
 # Path to the database in your Drive
 db_path = '/content/drive/MyDrive/OnlineRetailProject/online_retail.db'
 conn = sqlite3.connect(db_path)
-
+```
 Users need either their own local copy of the database or access via Google Drive.
+
+## Project Structure
+
+customers-segmentations-project/
+│── scripts/
+│   ├── create_db.py           # script to create database from CSV
+│   ├── explore_data.ipynb     # exploratory data analysis notebook
+│── README.md
+│── requirements.txt
+│── .gitignore
+
+
 
 
