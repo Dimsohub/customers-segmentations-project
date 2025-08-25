@@ -7,7 +7,7 @@ The workflow starts from the original XLSX file, then converts it to CSV for SQL
 
 1. **XLSX to CSV**  
    - The original dataset [`Online Retail.xlsx`](https://archive.ics.uci.edu/dataset/352/online+retail) is available on the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/352/online+retail).  
-   - Convert it to CSV because SQLite cannot import XLSX directly.
+   - Convert it to CSV.
 
 2. **CSV to SQLite Database**  
    - Using `create_db.py`, the CSV is cleaned and converted into a SQLite database `online_retail.db`.
