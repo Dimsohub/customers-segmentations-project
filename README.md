@@ -1,6 +1,6 @@
 # Сustomers segmentations project
 
-This project analyzes the Online Retail dataset using SQL and Python.  
+This project analyzes the Online Retail dataset (https://archive.ics.uci.edu/dataset/352/online+retail) using SQL and Python.  
 The workflow starts from the original CSV file, then creates a SQLite database, and finally explores the data with Python.
 
 ## Project Workflow
