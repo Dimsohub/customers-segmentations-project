@@ -60,8 +60,8 @@ plotly
 sqlite3-binary
 
 Install dependencies:
-
+```
 pip install -r requirements.txt
-
+```
 
 
