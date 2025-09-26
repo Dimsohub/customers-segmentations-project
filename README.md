@@ -14,12 +14,16 @@ The workflow starts from the original XLSX file, then converts it to CSV for SQL
 - Make the workflow Colab-friendly so it can be run without local setup.
 
 ## 📂 Repository Structure
-- `scripts/explore_data.ipynb` — Main demo notebook (EDA + SQL + charts)  
-- `scripts/create_db.py` — Script to create SQLite database  
-- `data/.gitkeep` — Placeholder, database downloaded here  
-- `requirements.txt`  
-- `.gitignore`  
-- `README.md`  
+
+```text
+customers-segmentations-project/
+  scripts/
+    create_db.py           # script to create database from CSV
+    explore_data.ipynb     # exploratory data analysis notebook
+  README.md
+  requirements.txt
+  .gitignore
+```
 
 ## 🔧 Setup & Usage
 
