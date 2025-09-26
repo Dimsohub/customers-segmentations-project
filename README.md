@@ -17,7 +17,7 @@ The workflow starts from the original XLSX file, then converts it to CSV for SQL
 
 ```text
 customers-segmentations-project/
-  data/                    #location for storing the database locally
+  data/                    # location for storing the database locally
   scripts/
     create_db.py           # script to create database from CSV
     explore_data.ipynb     # exploratory data analysis notebook
