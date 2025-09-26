@@ -12,7 +12,15 @@ The workflow starts from the original XLSX file, then converts it to CSV for SQL
 - Explore the data using SQL queries inside Python.
 - Visualize business insights with interactive Plotly charts.
 - Make the workflow Colab-friendly so it can be run without local setup.
-
+  
+## 🛠 Database Creation
+1. The original dataset comes as an **Excel file** from the UCI Repository.  
+2. Using the script `src/create_db.py`, we converted it into a **SQLite database (`online_retail.db`)** for easier querying.  
+3. The database was then uploaded to **Google Drive**, so the Colab notebook can automatically download it.  
+4. For local use, you can also generate the database yourself by running:
+   ```bash
+   python src/create_db.py
+   
 ## 📂 Repository Structure
 
 ```text
