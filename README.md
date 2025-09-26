@@ -57,18 +57,7 @@ df = pd.read_sql_query(query, conn)
 df.head()
 ```
 
-## Project Structure
-
-```text
-customers-segmentations-project/
-  scripts/
-    create_db.py           # script to create database from CSV
-    explore_data.ipynb     # exploratory data analysis notebook
-  README.md
-  requirements.txt
-  .gitignore
-```
-## Requirements
+##🔧 Requirements
 
 Python 3.9+
 
