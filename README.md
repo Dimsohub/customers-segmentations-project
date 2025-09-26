@@ -43,13 +43,10 @@ Just click the badge above ☝️.
 7. Place `the online_retail.db` file into the data/ folder. 
 8. Open `explore_data.ipynb` in Jupyter or Google Colab.
 9. In the notebook, comment out the Google Drive download part and replace it with a local connection
-    ```import sqlite3
+```
+import sqlite3
 import pandas as pd
-
-`Local database connection`
 conn = sqlite3.connect("data/online_retail.db")
-
-`Test query`
 query = "SELECT * FROM online_retail LIMIT 5;"
 df = pd.read_sql_query(query, conn)
 df.head()
