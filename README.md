@@ -90,8 +90,3 @@ These insights mimic a real-life business analyst workflow: load → query → v
 
 The dataset is provided by the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/352/online+retail?utm_source=chatgpt.com)
 It contains all transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based online retailer.
-
-## 📜 License
-
-This project is released under the MIT License.
-Feel free to use, modify, and share it.
