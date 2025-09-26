@@ -46,10 +46,10 @@ Just click the badge above ☝️.
     ```import sqlite3
 import pandas as pd
 
-# Local database connection
+`Local database connection`
 conn = sqlite3.connect("data/online_retail.db")
 
-# Test query
+`Test query`
 query = "SELECT * FROM online_retail LIMIT 5;"
 df = pd.read_sql_query(query, conn)
 df.head()
@@ -80,7 +80,7 @@ Install dependencies:
 ```
 pip install -r requirements.txt
 ```
-## Example Insights
+## 📊 Example Insights
 
 Monthly Revenue Trends — detect seasonality and growth/decline periods.
 
