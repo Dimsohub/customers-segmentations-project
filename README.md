@@ -37,7 +37,8 @@ Just click the badge above ☝️.
 2. Download the XLSX file from [UCI Repository](https://archive.ics.uci.edu/dataset/352/online+retail).  
 3. Convert it to CSV.
 4. Install dependencies:
-   ```pip install -r requirements.txt
+   ```
+   pip install -r requirements.txt
    ```
 6. Run `create_db.py` to generate `online_retail.db` locally.
 7. Place `the online_retail.db` file into the data/ folder. 
