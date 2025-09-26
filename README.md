@@ -74,11 +74,15 @@ pip install -r requirements.txt
 ```
 ## 📊 Example Insights
 
-Monthly Revenue Trends — detect seasonality and growth/decline periods.
+Order Value Destribution.
 
-Top Products by Revenue — understand which products drive most sales.
+Number of Unique Products.
 
-Customer Purchasing Patterns — explore purchase frequency and anomalies.
+Proportion of Customers by Number of Purchases.
+
+Top Most Commonly Purchased Product Pairs.
+
+Dashboard combining all graphs for better presentation.
 
 These insights mimic a real-life business analyst workflow: load → query → visualize → interpret.
 
