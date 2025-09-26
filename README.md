@@ -90,9 +90,7 @@ Customer Purchasing Patterns — explore purchase frequency and anomalies.
 
 These insights mimic a real-life business analyst workflow: load → query → visualize → interpret.
 
-## Dataset
+## 📑 Dataset
 
 The dataset is provided by the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/352/online+retail?utm_source=chatgpt.com)
 It contains all transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based online retailer.
-
-<img width="451" height="688" alt="image" src="https://github.com/user-attachments/assets/a1f4fadc-f9e1-4cfa-8a29-99e1a1162abc" />
