@@ -119,8 +119,3 @@ Source: UCI Machine Learning Repository — *Online Retail* dataset.
 The dataset contains transactions between **2010-12-01** and **2011-12-09** for a UK-based online retailer.
 
 ---
-
-## 📜 License
-This project is released under the MIT License — feel free to reuse and adapt for your portfolio or learning.
-
----
