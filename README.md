@@ -58,23 +58,23 @@ The workflow starts from the original Excel file, converts it into CSV/SQLite, a
 
 ### Option 2 — Run locally in Jupyter
 1. Clone the repo:
-    
+    ```
     git clone https://github.com/yourusername/customers-segmentations-project.git
     cd customers-segmentations-project
-
+    ``` 
 2. Install dependencies:
-
+    ```
     pip install -r requirements.txt
-
+    ```
 3. Start Jupyter:
-
+    ```
     jupyter notebook
-
+    ```
 4. Open `explore_data.ipynb`. The notebook will download the database into `data/online_retail.db` using `gdown`.  
    Alternatively, you can recreate the DB locally by running:
-
+    ```
     python create_db.py
-
+    ```
 ---
 
 ## 🧩 Quickstart code example
