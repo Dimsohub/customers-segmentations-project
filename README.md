@@ -115,7 +115,7 @@ These steps reflect a practical analyst workflow: **load → inspect → aggrega
 ---
 
 ## 📑 Dataset
-Source: UCI Machine Learning Repository — *Online Retail* dataset.  
+Source: UCI Machine Learning Repository — *[Online Retail](https://archive.ics.uci.edu/dataset/352/online+retail)* dataset.  
 The dataset contains transactions between **2010-12-01** and **2011-12-09** for a UK-based online retailer.
 
 ---
