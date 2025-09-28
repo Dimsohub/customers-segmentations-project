@@ -1,88 +1,126 @@
-# Сustomers segmentation project
+# Customers Segmentation Project
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dimsohub/customers-segmentations-project/blob/main/scripts/explore_data.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yourusername/customers-segmentations-project/blob/main/explore_data.ipynb)
 
-## 📌 Project Overview
-This project demonstrates how to combine **SQL queries** and **Python-based EDA (Exploratory Data Analysis)** on a real dataset.  
-The dataset contains transactions from a UK-based online retail store and is widely used for data analysis practice.  
-The workflow starts from the original XLSX file, then converts it to CSV for SQLite, and finally explores the data with SQL and Python.
+---
 
-**Key goals:**
-- Build a reproducible SQLite database from the raw dataset.
-- Explore the data using SQL queries inside Python.
-- Visualize business insights with interactive Plotly charts.
-- Make the workflow Colab-friendly so it can be run without local setup.
-  
-## 🛠 Database Creation
-1. The original dataset comes as an **Excel file** from the UCI Repository.  
-2. Using the script `src/create_db.py`, we converted it into a **SQLite database (`online_retail.db`)** for easier querying.  
-3. The database was then uploaded to **Google Drive**, so the Colab notebook can automatically download it.  
-4. For local use, you can also generate the database yourself by running:
-   ```bash
-   python src/create_db.py
-   
-## 📂 Repository Structure
+## 📌 Project overview
+This project shows how to combine **SQL queries** and **Python-based Exploratory Data Analysis (EDA)** on a real-world dataset.  
+The data contains transactions from a UK-based online retail store and is a common benchmark for practice and demos.
 
-```text
-customers-segmentations-project/
-  data/                    # location for storing the database locally
-  scripts/
-    create_db.py           # script to create database from CSV
-    explore_data.ipynb     # exploratory data analysis notebook
-  README.md
-  requirements.txt
-  .gitignore
-```
+The workflow starts from the original Excel file, converts it into CSV/SQLite, and then explores the data with SQL and Python.
 
-## 🔧 Setup & Usage
+**The project covers:**
+- Database creation from raw Excel/CSV files  
+- Exploratory Data Analysis (EDA)  
+- Data visualization with **Plotly**  
+- Demonstration in both **Google Colab** and **Jupyter Notebook**
 
-### Option 1: Run in Google Colab (recommended)
-Just click the badge above ☝️.  
-- The notebook automatically downloads the database from **Google Drive** (you only need to update the `FILE_ID` if you use your own copy).  
-- No local setup required.
+---
 
-### Option 2: Run Locally in Jupyter
+## 🚀 Project workflow
 
-1. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-2. Start Jupyter Notebook:
-   ```
-   jupyter notebook
-   ```
-3. Open `explore_data.ipynb`.
-The notebook will use `gdown` to download the database into data/online_retail.db.  
+1. **Database creation**  
+   - The original Excel/CSV file is processed with `create_db.py` or `run_create_db.ipynb`.  
+   - This generates a SQLite database file: `online_retail.db`.  
+   - The database was uploaded to Google Drive to make it easy to access from Colab and other environments.
 
-## 🔧 Requirements
+2. **Data access**  
+   - The database file is downloaded automatically via [`gdown`](https://github.com/wkentaro/gdown) in the notebooks.  
+   - It is saved to the `data/` folder as `data/online_retail.db`.  
+   - The same download code works in **both Colab and local Jupyter** — no changes required.
 
-Python 3.9+
+3. **Exploration and analysis**  
+   - Performed in `explore_data.ipynb`.  
+   - Includes SQL-based checks and aggregations, standard EDA (missing values, duplicates, distributions), and interactive Plotly visualizations.
 
-pandas
+---
 
-plotly
+## 📂 Repository structure
+    customers-segmentations-project/
+    ├── data/                 # local folder where the database will be downloaded (contains .gitkeep)
+    │   └── .gitkeep
+    ├── create_db.py          # script to create database from CSV/Excel
+    ├── run_create_db.ipynb   # optional notebook to build the DB interactively
+    ├── explore_data.ipynb    # main EDA notebook (Colab & Jupyter friendly)
+    ├── requirements.txt
+    ├── .gitignore
+    └── README.md
 
-sqlite3-binary
+---
 
-Install dependencies:
-```
-pip install -r requirements.txt
-```
-## 📊 Example Insights
+## 🔧 Setup & quick start
 
-Order Value Destribution.
+### Option 1 — Run in Google Colab (recommended)
+1. Click the **Open in Colab** badge at the top of this README.  
+2. If you want to use your own copy of the DB, replace the `FILE_ID` in the notebook with your Drive file id.  
+3. The notebook will download the DB into `data/online_retail.db` and run the analysis cells.
 
-Number of Unique Products.
+### Option 2 — Run locally in Jupyter
+1. Clone the repo:
+    
+    git clone https://github.com/yourusername/customers-segmentations-project.git
+    cd customers-segmentations-project
 
-Proportion of Customers by Number of Purchases.
+2. Install dependencies:
 
-Top Most Commonly Purchased Product Pairs.
+    pip install -r requirements.txt
 
-Dashboard combining all graphs for better presentation.
+3. Start Jupyter:
 
-These insights mimic a real-life business analyst workflow: load → query → visualize → interpret.
+    jupyter notebook
+
+4. Open `explore_data.ipynb`. The notebook will download the database into `data/online_retail.db` using `gdown`.  
+   Alternatively, you can recreate the DB locally by running:
+
+    python create_db.py
+
+---
+
+## 🧩 Quickstart code example
+Copy-paste this into a notebook cell to check the connection:
+
+    import sqlite3
+    import pandas as pd
+
+    conn = sqlite3.connect("data/online_retail.db")
+    df = pd.read_sql_query("SELECT * FROM online_retail LIMIT 5;", conn)
+    df.head()
+
+---
+
+## 🛠 Requirements
+- Python 3.9+  
+- pandas  
+- plotly  
+- gdown  
+- sqlite3 (Python stdlib)
+
+Install everything with:
+
+    pip install -r requirements.txt
+
+---
+
+## 📊 Example insights
+The notebooks produce a set of business-oriented visuals and findings, for example:
+- Distribution of order values  
+- Number of unique products and top sellers by revenue  
+- Customer segmentation by purchase frequency and value  
+- Most common product pairs (basket analysis)  
+- An interactive dashboard that brings the charts together
+
+These steps reflect a practical analyst workflow: **load → inspect → aggregate → visualize → interpret**.
+
+---
 
 ## 📑 Dataset
+Source: UCI Machine Learning Repository — *Online Retail* dataset.  
+The dataset contains transactions between **2010-12-01** and **2011-12-09** for a UK-based online retailer.
 
-The dataset is provided by the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/352/online+retail?utm_source=chatgpt.com)
-It contains all transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based online retailer.
+---
+
+## 📜 License
+This project is released under the MIT License — feel free to reuse and adapt for your portfolio or learning.
+
+---
