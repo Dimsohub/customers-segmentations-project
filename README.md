@@ -41,30 +41,18 @@ Just click the badge above ☝️.
 - The notebook automatically downloads the database from **Google Drive** (you only need to update the `FILE_ID` if you use your own copy).  
 - No local setup required.
 
-### Option 2: Run locally
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-   cd YOUR_REPO
-   ```
-2. Download the XLSX file from [UCI Repository](https://archive.ics.uci.edu/dataset/352/online+retail).  
-3. Convert it to CSV.
-4. Install dependencies:
+### Option 2: Run Locally in Jupyter
+
+1. Install dependencies:
    ```
    pip install -r requirements.txt
    ```
-6. Run `create_db.py` to generate `online_retail.db` locally.
-7. Place `the online_retail.db` file into the data/ folder. 
-8. Open `explore_data.ipynb` in Jupyter or Google Colab.
-9. In the notebook, comment out the Google Drive download part and replace it with a local connection
-```
-import sqlite3
-import pandas as pd
-conn = sqlite3.connect("data/online_retail.db")
-query = "SELECT * FROM online_retail LIMIT 5;"
-df = pd.read_sql_query(query, conn)
-df.head()
-```
+2. Start Jupyter Notebook:
+   ```
+   jupyter notebook
+   ```
+3. Open `explore_data.ipynb`.
+The notebook will use `gdown` to download the database into data/online_retail.db.  
 
 ## 🔧 Requirements
 
