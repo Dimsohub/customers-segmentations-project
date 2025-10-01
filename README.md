@@ -39,7 +39,7 @@ The workflow starts from the original Excel file, converts it into CSV/SQLite, a
 ## 📂 Repository structure
     customers-segmentations-project/
     ├── data/                            # local folder where the database will be downloaded (contains .gitkeep)
-    │   └── .gitkeep
+        └── .gitkeep
     ├── scripts/                         # folder with scripts
         └── create_db.py                 # script to create database from CSV/Excel
         └── explore_data.ipynb           # main EDA notebook (Colab & Jupyter friendly)
