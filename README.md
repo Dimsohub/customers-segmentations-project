@@ -1,6 +1,7 @@
 # Customers Segmentation Project
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dimsohub/customers-segmentations-project/blob/main/explore_data.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dimsohub/customers-segmentations-project/blob/main/scripts/explore_data.ipynb)
+
 
 ---
 
